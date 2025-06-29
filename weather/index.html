@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+    </style>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+    <div class="weather-container">
+        <h1>Weather App ⛅</h1>
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button onclick="getWeather()">Get Weather</button>
+
+        <div id="weatherResult" class="hidden">
+            <h2 id="cityName"></h2>
+            <p id="temp"></p>
+            <p id="condition"></p>
+            <p id="humidity"></p>
+            <p id="wind"></p>
+            <p id="feelsLike"></p>
+            <p id="minMaxTemp"></p>
+
+            <div class="forecast-section">
+                <h3>Hourly Forecast</h3>
+                <div id="hourlyForecast" class="forecast-cards"></div>
+            </div>
+
+            <div class="forecast-section">
+                <h3>Weekly Forecast</h3>
+                <div id="weeklyForecast" class="forecast-cards"></div>
+            </div>
+
+            <img id="weatherIcon" src="" alt="Weather Icon">
+        </div>
+        <p id="error" class="error-msg"></p>
+    </div>
+    <script src="wscript.js"></script>
+</body>
+
+</html>
