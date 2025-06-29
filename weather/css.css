@@ -1,0 +1,143 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom, #112b43, #158b6a);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  padding: 12px;
+  width: 80%;
+  border-radius: 20px;
+  border: none;
+  font-size: 1em;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 25px;
+  border-radius: 20px;
+  border: none;
+  background-color: #00d084;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #00a96b;
+}
+
+.weather-container {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  width: 80vw;
+  animation: slideUp 0.5s ease-out;
+}
+
+#cityName {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin: 15px 0;
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+
+.weather-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  margin-top: 20px;
+  padding: 20px;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.weather-card img {
+  width: 80px;
+  margin-top: 10px;
+  filter: drop-shadow(0 0 5px #fff);
+}
+
+#temp {
+  font-size: 2.5em;
+  margin: 10px 0;
+}
+
+#condition, #humidity, #wind {
+  font-size: 1em;
+  margin: 5px 0;
+}
+
+.forecast-section {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.forecast-section h3 {
+  font-size: 1.2em;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.forecast-cards {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.forecast-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 12px;
+  text-align: center;
+  min-width: 80px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.forecast-card img {
+  width: 40px;
+  height: 40px;
+  margin: 5px auto;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
